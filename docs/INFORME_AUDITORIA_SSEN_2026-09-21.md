@@ -358,7 +358,7 @@ Bloques ejecutados: 1 (descubrimiento), 2 (auditoría general), 3 (pruebas), 4 (
 ### Anexo E — Estado tras la remediación (22 de septiembre de 2026)
 
 - **Correcciones aplicadas**: las tres severidades críticas (rutas base, autenticación del punto de entrada y gestión de secretos), la notificación `URL_DELETED` de Google con comprobación previa de 404 o 410, el resto de severidades altas y la deuda media y baja; clave de IndexNow rotada y secretos fuera del control de versiones.
-- **Pruebas**: arnés nativo con 30 pruebas (correctas en PHP 8.3 en el servidor); integración continua preparada con matriz de PHP 8.1 a 8.4.
-- **Repositorio**: https://github.com/paginaviva/simple-search-engine-notification — commit `c123a6a`; descripción, temas y página principal actualizados. La integración continua queda pendiente de publicar mientras el token no disponga del permiso «workflow».
-- **Despliegue de pruebas**: https://www.espresso.iadesarrollo.top — host canónico con `www`, autenticación básica de aplicación (401 sin credenciales y 200 con ellas), IndexNow con respuesta 200 y registro fuera del documento raíz (`private/logs`, por la restricción `open_basedir` de Hestia).
-- **Pendiente**: actualizar PHP en producción (8.1 sin soporte), configurar credenciales de Google si procede, definir la tarea programada en el servidor de pruebas y valorar la purga del historial remoto (contiene la clave antigua, ya invalidada).
+- **Pruebas**: arnés nativo con 30 pruebas, correctas en PHP 8.3 y 8.4 en el servidor; la verificación se realiza con `php tests/run.php` (sin integración continua, descartada por decisión del usuario).
+- **Repositorio**: https://github.com/paginaviva/simple-search-engine-notification — historial reescrito a una raíz limpia (`89a1112`, más el ajuste `e8b85dc`) para eliminar la clave antigua; descripción, temas y página principal actualizados.
+- **Despliegue de pruebas**: https://www.espresso.iadesarrollo.top — host canónico con `www`, PHP 8.4, autenticación básica de aplicación (401 sin credenciales y 200 con ellas), IndexNow con respuesta 200 y registro fuera del documento raíz (`private/logs`, por la restricción `open_basedir` de Hestia).
+- **Pendiente**: definir el PHP de producción (8.1 sin soporte; recomendado 8.4) y configurar las credenciales de Google si procede.
