@@ -1,0 +1,13 @@
+# SSEN — Protección del núcleo
+#
+# La autenticación de la interfaz web se aplica en la propia aplicación
+# (core_index/auth_guard.php), por lo que funciona igual en Apache, LiteSpeed
+# y nginx. Este archivo solo documenta la configuración; en nginx se ignora.
+#
+# Antes de desplegar:
+#   1) Cree el archivo de usuarios FUERA del documento raíz:
+#        htpasswd -B -c ../ssen-private/.htpasswd operador
+#      La ruta por defecto es AUTH_USERS_FILE en core_index/config/config.php.
+#   2) Acceda siempre por HTTPS.
+#
+# La automatización por cron no se ve afectada por la autenticación.

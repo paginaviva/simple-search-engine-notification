@@ -1,0 +1,28 @@
+{
+  "urls": [
+    {
+      "loc": "https://tu-dominio.com/",
+      "lastmod": "2026-01-10",
+      "changefreq": "daily",
+      "priority": 1.0,
+      "notify_indexnow": true,
+      "notify_google_indexing": true
+    },
+    {
+      "loc": "https://tu-dominio.com/post/ejemplo-articulo-1.php",
+      "lastmod": "2026-01-10",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "notify_indexnow": true,
+      "notify_google_indexing": true
+    },
+    {
+      "loc": "https://tu-dominio.com/post/otro-articulo.php",
+      "lastmod": "2026-01-09",
+      "changefreq": "weekly",
+      "priority": 0.8,
+      "notify_indexnow": true,
+      "notify_google_indexing": false
+    }
+  ]
+}

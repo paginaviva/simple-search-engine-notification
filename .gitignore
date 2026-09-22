@@ -1,0 +1,27 @@
+# ============================================================================
+# SSEN — Archivos excluidos del control de versiones
+# ============================================================================
+
+# --- Espacio de trabajo y procesos internos (no forman parte del producto) ---
+.opencode/
+.tmp/
+tasks/
+veracidad-idioma-abreviaciones.txt
+
+# --- Legado local (no se publica) ---
+gestion/
+/config.php
+
+# --- Secretos y credenciales ---
+core_index/config/indexnow_key.txt
+/*.txt
+*credentials*.json
+
+# --- Archivos generados en tiempo de ejecución ---
+sitemap.xml
+sitemap.old.xml
+
+# --- Varios ---
+.DS_Store
+Thumbs.db
+*.swp
