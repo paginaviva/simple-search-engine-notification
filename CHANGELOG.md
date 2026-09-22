@@ -35,6 +35,7 @@ Remediación derivada de la auditoría del 2026-09-21: corrección de las tres s
 - Se distinguen ausencia y corrupción del sitemap anterior, evitando renotificaciones masivas.
 - Se aplican la cuota diaria de Google y la lista blanca del parámetro `source`.
 - Retirada de `openssl_free_key()` (obsoleto desde PHP 8.0).
+- Aviso de obsolescencia de `fgetcsv()` en PHP 8.4 (parámetro `escape` explícito).
 
 ### Seguridad
 

@@ -164,7 +164,7 @@ function loadUrlsFromCSV($csvPath)
     }
 
     // Cabecera: quitar BOM, normalizar a minúsculas y validar
-    $header = fgetcsv($file);
+    $header = fgetcsv($file, escape: '\\');
     if ($header === false || empty($header)) {
         fclose($file);
         return ['success' => false, 'urls' => [], 'count' => 0, 'error' => 'CSV sin cabecera o vacío', 'warnings' => $warnings];
@@ -191,7 +191,7 @@ function loadUrlsFromCSV($csvPath)
 
     $urls = [];
     $lineNumber = 1;
-    while (($row = fgetcsv($file)) !== false) {
+    while (($row = fgetcsv($file, escape: '\\')) !== false) {
         $lineNumber++;
 
         if ($row === [null] || $row === false) {
